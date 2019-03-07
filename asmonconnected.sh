@@ -15,7 +15,7 @@ sudo apt-get install -y apt-transport-https lsb-release ca-certificates curl sof
   || { echo "## Fail: failed to install prereq packages" ; exit 1 ; }
 
 sudo apt-key --keyring /etc/apt/trusted.gpg.d/Microsoft.gpg adv \
-     --keyserver packages.microsoft.com \
+     --keyserver hkp://keyserver.ubuntu.com:80 \
      --recv-keys BC528686B50D79E339D3721CEB3E94ADBE1229CF \
   && echo "## Pass: added Microsoft signing key for CLI repository" \
   || { echo "## Fail: failed to add Microsoft signing key for CLI repository" ; exit 1 ; }
